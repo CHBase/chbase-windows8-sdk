@@ -119,7 +119,7 @@ namespace CHBase.ItemTypes
 
         public static Medication Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<Medication>(xml);
+            return CHBaseClient.Serializer.FromXml<Medication>(xml);
         }
 
         public static ItemQuery QueryFor()

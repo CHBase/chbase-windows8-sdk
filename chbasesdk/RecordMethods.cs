@@ -10,9 +10,9 @@ namespace CHBase.Foundation
 {
     public class RecordMethods
     {
-        private readonly HealthVaultClient m_client;
+        private readonly CHBaseClient m_client;
 
-        public RecordMethods(HealthVaultClient client)
+        public RecordMethods(CHBaseClient client)
         {
             if (client == null)
             {

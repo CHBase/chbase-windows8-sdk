@@ -129,7 +129,7 @@ namespace CHBase.Store
 
         public static ViewData Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<ViewData>(xml);
+            return CHBaseClient.Serializer.FromXml<ViewData>(xml);
         }
         
         public ViewKey KeyAtIndex(int index)

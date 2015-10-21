@@ -96,7 +96,7 @@ namespace CHBase.ItemTypes
 
         public static Condition Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<Condition>(xml);
+            return CHBaseClient.Serializer.FromXml<Condition>(xml);
         }
 
         public static ItemQuery QueryFor()

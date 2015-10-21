@@ -14,9 +14,9 @@ namespace CHBase.Foundation
 {
     public class ServiceMethods
     {
-        private readonly HealthVaultClient m_client;
+        private readonly CHBaseClient m_client;
 
-        public ServiceMethods(HealthVaultClient client)
+        public ServiceMethods(CHBaseClient client)
         {
             if (client == null)
             {

@@ -9,12 +9,12 @@ namespace CHBase.Foundation.Methods
     {
         MSATicket m_msaTicket;
 
-        public CreateCredentialTokenWithTicket(HealthVaultClient client, string msaTicket)
+        public CreateCredentialTokenWithTicket(CHBaseClient client, string msaTicket)
             : this(client, new MSATicket(msaTicket))
         {
         }
 
-        public CreateCredentialTokenWithTicket(HealthVaultClient client, MSATicket msaTicket)
+        public CreateCredentialTokenWithTicket(CHBaseClient client, MSATicket msaTicket)
             : base(client)
         {
             if (msaTicket == null)

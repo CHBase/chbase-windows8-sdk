@@ -10,7 +10,7 @@ namespace CHBase.Foundation.Methods
         RequestBody m_body;
         Type m_responseType;
 
-        public GetVocabulary(HealthVaultClient client, RequestBody body, Type responseType)
+        public GetVocabulary(CHBaseClient client, RequestBody body, Type responseType)
             : base(client)
         {
             if (body == null)

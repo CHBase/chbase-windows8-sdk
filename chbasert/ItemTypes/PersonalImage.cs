@@ -80,7 +80,7 @@ namespace CHBase.ItemTypes
 
         public static PersonalImage Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<PersonalImage>(xml);
+            return CHBaseClient.Serializer.FromXml<PersonalImage>(xml);
         }
 
         public IAsyncOperation<bool> Display(IRecord record)

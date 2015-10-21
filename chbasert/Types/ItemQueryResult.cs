@@ -167,7 +167,7 @@ namespace CHBase.Types
 
         public static ItemQueryResult Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<ItemQueryResult>(xml);
+            return CHBaseClient.Serializer.FromXml<ItemQueryResult>(xml);
         }
 
         public bool ShouldSerializeName()

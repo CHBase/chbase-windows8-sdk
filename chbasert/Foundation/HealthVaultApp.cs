@@ -38,7 +38,7 @@ namespace CHBase.Foundation
         internal const string UserInfoKey = "UserInfo_V1";
 
         private readonly AppInfoProxy m_appInfo;
-        private readonly HealthVaultClient m_client;
+        private readonly CHBaseClient m_client;
 
         private IServiceDefinition m_serviceDefinition;
         private readonly object m_lock;
@@ -78,7 +78,7 @@ namespace CHBase.Foundation
             m_startupStatus = AppStartupStatus.Cancelled;
             m_appInfo = new AppInfoProxy(appSettings.MasterAppId, appSettings.IsMultiInstanceAware);
 
-            m_client = new HealthVaultClient(
+            m_client = new CHBaseClient(
                 m_appInfo,
                 m_serviceInfo,
                 appSettings.IsFirstParty,
@@ -199,7 +199,7 @@ namespace CHBase.Foundation
             get { return (UserInfo != null); }
         }
 
-        internal HealthVaultClient Client
+        internal CHBaseClient Client
         {
             get { return m_client; }
         }
@@ -460,7 +460,7 @@ namespace CHBase.Foundation
             PersonInfo personInfo = null;
 
             if (!await m_client.EnsureUserIdentityAsync(cancelToken, 
-                HealthVaultClient.MBISSLAuthPolicy))
+                CHBaseClient.MBISSLAuthPolicy))
             {
                 return personInfo;
             }
@@ -474,7 +474,7 @@ namespace CHBase.Foundation
         {
             if (m_client.UseOnlineAuthModel 
                 && !await m_client.EnsureUserIdentityAsync(cancelToken,
-                        HealthVaultClient.HBIAuthPolicy))
+                        CHBaseClient.HBIAuthPolicy))
             {
                 return AppStartupStatus.Failed;
             }

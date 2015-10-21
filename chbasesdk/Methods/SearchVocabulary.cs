@@ -14,7 +14,7 @@ namespace CHBase.Foundation.Methods
         RequestBody m_body;
         Type m_responseType;
 
-        public SearchVocabulary(HealthVaultClient client, RequestBody body, Type responseType)
+        public SearchVocabulary(CHBaseClient client, RequestBody body, Type responseType)
             : base(client)
         {
             if (body == null)

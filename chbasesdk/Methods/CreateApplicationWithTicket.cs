@@ -11,12 +11,12 @@ namespace CHBase.Foundation.Methods
         MSATicket m_msaTicket;
         AppInstanceName m_appInstanceName;
 
-        public CreateApplicationWithTicket(HealthVaultClient client, string msaTicket, string appInstanceName)
+        public CreateApplicationWithTicket(CHBaseClient client, string msaTicket, string appInstanceName)
             : this(client, new MSATicket(msaTicket), new AppInstanceName(appInstanceName))
         {
         }
 
-        public CreateApplicationWithTicket(HealthVaultClient client, MSATicket msaTicket, AppInstanceName appInstanceName)
+        public CreateApplicationWithTicket(CHBaseClient client, MSATicket msaTicket, AppInstanceName appInstanceName)
             : base(client)
         {
             if (msaTicket == null)

@@ -26,7 +26,7 @@ namespace CHBase.Types
 
         public static ThingTypeGetResults Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<ThingTypeGetResults>(xml);
+            return CHBaseClient.Serializer.FromXml<ThingTypeGetResults>(xml);
         }
     }
 }

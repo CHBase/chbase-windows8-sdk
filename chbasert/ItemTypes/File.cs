@@ -109,7 +109,7 @@ namespace CHBase.ItemTypes
 
         public static File Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<File>(xml);
+            return CHBaseClient.Serializer.FromXml<File>(xml);
         }
 
         public IAsyncOperation<bool> Display(IRecord record)

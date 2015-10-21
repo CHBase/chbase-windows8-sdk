@@ -16,7 +16,7 @@ using CHBase.Foundation.Types;
 
 namespace CHBase.Foundation
 {
-    public class HealthVaultClient : IDisposable
+    public class CHBaseClient : IDisposable
     {
         private const int DefaultBufferSize = 16*1024; // bytes
         public const string MBISSLAuthPolicy = "MBI_SSL";
@@ -40,7 +40,7 @@ namespace CHBase.Foundation
         private IHttpTransport m_transport;
         private GetServiceDefinitionResponse m_topologyServiceDefinition;
 
-        static HealthVaultClient()
+        static CHBaseClient()
         {
             s_serializer = new Serializer();
             s_version = CreateVersionString();
@@ -48,7 +48,7 @@ namespace CHBase.Foundation
 
         private static string CreateVersionString()
         {
-            string fileVersion = typeof(HealthVaultClient).GetTypeInfo().Assembly.GetName().Version.ToString();
+            string fileVersion = typeof(CHBaseClient).GetTypeInfo().Assembly.GetName().Version.ToString();
 
             return String.Format(
                 CultureInfo.InvariantCulture,
@@ -56,7 +56,7 @@ namespace CHBase.Foundation
                 fileVersion);
         }
 
-        public HealthVaultClient(AppInfo appInfo, ServiceInfo serviceInfo, IWebAuthorizer webAuthBroker)
+        public CHBaseClient(AppInfo appInfo, ServiceInfo serviceInfo, IWebAuthorizer webAuthBroker)
             : this(
                 appInfo,
                 serviceInfo,
@@ -68,7 +68,7 @@ namespace CHBase.Foundation
         {
         }
 
-        public HealthVaultClient(AppInfo appInfo, ServiceInfo serviceInfo, bool useOnlineAuthModel, IWebAuthorizer webAuthBroker)
+        public CHBaseClient(AppInfo appInfo, ServiceInfo serviceInfo, bool useOnlineAuthModel, IWebAuthorizer webAuthBroker)
             : this(
                 appInfo,
                 serviceInfo,
@@ -80,7 +80,7 @@ namespace CHBase.Foundation
         {
         }
 
-        public HealthVaultClient(
+        public CHBaseClient(
             AppInfo appInfo,
             ServiceInfo serviceInfo,
             IHttpTransport transport,

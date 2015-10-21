@@ -85,7 +85,7 @@ namespace CHBase.ItemTypes
 
         public static MealDefinition Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<MealDefinition>(xml);
+            return CHBaseClient.Serializer.FromXml<MealDefinition>(xml);
         }
 
         public static ItemQuery QueryFor()

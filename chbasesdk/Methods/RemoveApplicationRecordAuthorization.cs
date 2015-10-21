@@ -12,12 +12,12 @@ namespace CHBase.Foundation.Methods
     {
         RecordReference m_record;
 
-        public RemoveApplicationRecordAuthorization(HealthVaultClient client, string personID, string recordID)
+        public RemoveApplicationRecordAuthorization(CHBaseClient client, string personID, string recordID)
             : this(client, new RecordReference(personID, recordID))
         {
         }
 
-        public RemoveApplicationRecordAuthorization(HealthVaultClient client, RecordReference record)
+        public RemoveApplicationRecordAuthorization(CHBaseClient client, RecordReference record)
             : base(client)
         {
             if (record == null)

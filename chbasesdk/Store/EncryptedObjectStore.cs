@@ -74,7 +74,7 @@ namespace CHBase.Foundation.Store
                         return reader.ReadToEnd();
                     }
 
-                    return HealthVaultClient.Serializer.Deserialize(reader, type, null);
+                    return CHBaseClient.Serializer.Deserialize(reader, type, null);
                 }
             }
             catch (Exception)
@@ -107,7 +107,7 @@ namespace CHBase.Foundation.Store
                 }
                 else
                 {
-                    HealthVaultClient.Serializer.Serialize(writer, value, null);
+                    CHBaseClient.Serializer.Serialize(writer, value, null);
                 }
             }
 

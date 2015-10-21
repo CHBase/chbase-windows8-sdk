@@ -8,7 +8,7 @@ namespace CHBase.Foundation
     /// <summary>
     /// BodyReader helps supply deserialization Context....
     /// </summary>
-    public class HealthVaultXmlReader : XmlReader
+    public class CHBaseXmlReader : XmlReader
     {
         internal static XmlReaderSettings ReaderSettings = new XmlReaderSettings
                                                            {
@@ -20,7 +20,7 @@ namespace CHBase.Foundation
         private string m_rootLocalName;
         private string m_rootName;
 
-        public HealthVaultXmlReader(XmlReader inner)
+        public CHBaseXmlReader(XmlReader inner)
         {
             if (inner == null)
             {
@@ -279,7 +279,7 @@ namespace CHBase.Foundation
 
         public static XmlReader Create(XmlReader inner)
         {
-            return new HealthVaultXmlReader(inner);
+            return new CHBaseXmlReader(inner);
         }
 
         public new static XmlReader Create(TextReader reader)

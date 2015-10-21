@@ -11,7 +11,7 @@ namespace CHBase.Foundation.Methods
         private MSATicket m_msaTicket;
         private object m_createAccountPersonInfo;
 
-        public CreateAccountWithTicket(HealthVaultClient client, string msaTicket, object createAccountPersonInfo)
+        public CreateAccountWithTicket(CHBaseClient client, string msaTicket, object createAccountPersonInfo)
             : base(client)
         {
             if (String.IsNullOrEmpty(msaTicket))

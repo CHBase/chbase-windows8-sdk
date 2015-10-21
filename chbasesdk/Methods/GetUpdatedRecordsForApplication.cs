@@ -13,7 +13,7 @@ namespace CHBase.Foundation.Methods
     {
         GetUpdatedRecordsForApplicationParams m_params;
         
-        public GetUpdatedRecordsForApplication(HealthVaultClient client, DateTimeOffset lastUpdateDate)
+        public GetUpdatedRecordsForApplication(CHBaseClient client, DateTimeOffset lastUpdateDate)
             : base(client)
         {
             if (client == null)

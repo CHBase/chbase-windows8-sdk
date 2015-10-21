@@ -94,7 +94,7 @@ namespace CHBase.ItemTypes
 
         public static Cholesterol Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<Cholesterol>(xml);
+            return CHBaseClient.Serializer.FromXml<Cholesterol>(xml);
         }
 
         public static ItemQuery QueryFor()

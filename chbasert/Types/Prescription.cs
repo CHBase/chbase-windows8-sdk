@@ -54,7 +54,7 @@ namespace CHBase.Types
 
         public static Person Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<Person>(xml);
+            return CHBaseClient.Serializer.FromXml<Person>(xml);
         }
     }
 }

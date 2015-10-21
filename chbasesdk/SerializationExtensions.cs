@@ -27,7 +27,7 @@ namespace CHBase.Foundation
         {
             using (var writer = new StringWriter())
             {
-                HealthVaultClient.Serializer.Serialize(writer, obj, null);
+                CHBaseClient.Serializer.Serialize(writer, obj, null);
                 return writer.ToString();
             }
         }
@@ -40,7 +40,7 @@ namespace CHBase.Foundation
                     obj.GetType(), 
                     new XmlRootAttribute(root));
 
-                 using (var xmlWriter = (HealthVaultXmlWriter)HealthVaultXmlWriter.Create(textWriter))
+                 using (var xmlWriter = (CHBaseXmlWriter)CHBaseXmlWriter.Create(textWriter))
                  {
                      xmlWriter.Context = null;
                      serializer.Serialize(xmlWriter, obj);
@@ -61,7 +61,7 @@ namespace CHBase.Foundation
             {
                 foreach (object item in array)
                 {
-                    HealthVaultClient.Serializer.Serialize(writer, item, null);
+                    CHBaseClient.Serializer.Serialize(writer, item, null);
                 }
                 return writer.ToString();
             }

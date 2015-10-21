@@ -10,9 +10,9 @@ namespace CHBase.Foundation.Methods
 {
     public abstract class HealthVaultMethod
     {
-        HealthVaultClient m_client;
+        CHBaseClient m_client;
 
-        public HealthVaultMethod(HealthVaultClient client)
+        public HealthVaultMethod(CHBaseClient client)
         {
             if (client == null)
             {
@@ -22,7 +22,7 @@ namespace CHBase.Foundation.Methods
             m_client = client;
         }
 
-        public HealthVaultClient Client
+        public CHBaseClient Client
         {
             get { return m_client;}
         }

@@ -141,7 +141,7 @@ namespace CHBase.Types
 
         public static CodableValue Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<CodableValue>(xml);
+            return CHBaseClient.Serializer.FromXml<CodableValue>(xml);
         }
 
         public override string ToString()

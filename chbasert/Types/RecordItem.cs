@@ -229,7 +229,7 @@ namespace CHBase.Types
 
         public static RecordItem Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<RecordItem>(xml);
+            return CHBaseClient.Serializer.FromXml<RecordItem>(xml);
         }
 
         public static string SerializeMultiple(IList<RecordItem> items)
@@ -239,7 +239,7 @@ namespace CHBase.Types
 
         public static IList<RecordItem> DeserializeMultiple(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<List<RecordItem>>(xml);
+            return CHBaseClient.Serializer.FromXml<List<RecordItem>>(xml);
         }
 
         public static IList<IItemDataTyped> DeserializeToTypedItems(string xml)

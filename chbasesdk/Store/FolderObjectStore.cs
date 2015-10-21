@@ -122,7 +122,7 @@ namespace CHBase.Store
                             return reader.ReadToEnd();
                         }
 
-                        return HealthVaultClient.Serializer.Deserialize(reader, type, null);
+                        return CHBaseClient.Serializer.Deserialize(reader, type, null);
                     }
                 }
             }
@@ -157,7 +157,7 @@ namespace CHBase.Store
                     }
                     else
                     {
-                        HealthVaultClient.Serializer.Serialize(writer, value, null);
+                        CHBaseClient.Serializer.Serialize(writer, value, null);
                     }
                 }
             }

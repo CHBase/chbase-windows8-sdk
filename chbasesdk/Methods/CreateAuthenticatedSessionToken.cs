@@ -11,7 +11,7 @@ namespace CHBase.Foundation.Methods
 {
     public class CreateAuthenticatedSessionToken : HealthVaultMethod
     {
-        public CreateAuthenticatedSessionToken(HealthVaultClient client)
+        public CreateAuthenticatedSessionToken(CHBaseClient client)
             : base(client)
         {
         }

@@ -85,7 +85,7 @@ namespace CHBase.Foundation
         private void SerializeRequest(TextWriter textWriter, Request request, object context)
         {
             // Delegate error checking to serializer
-            using (var xmlWriter = (HealthVaultXmlWriter) HealthVaultXmlWriter.Create(textWriter))
+            using (var xmlWriter = (CHBaseXmlWriter) CHBaseXmlWriter.Create(textWriter))
             {
                 xmlWriter.AllowRootPrefix = true;
                 xmlWriter.Context = context;
@@ -96,7 +96,7 @@ namespace CHBase.Foundation
         private void SerializeObject(TextWriter textWriter, object obj, object context)
         {
             XmlSerializer serializer = m_factory[obj.GetType()];
-            using (var xmlWriter = (HealthVaultXmlWriter) HealthVaultXmlWriter.Create(textWriter))
+            using (var xmlWriter = (CHBaseXmlWriter) CHBaseXmlWriter.Create(textWriter))
             {
                 xmlWriter.Context = context;
                 serializer.Serialize(xmlWriter, obj);
@@ -105,7 +105,7 @@ namespace CHBase.Foundation
 
         private object DeserializeObject(TextReader reader, Type type, object context)
         {
-            using (var xmlReader = (HealthVaultXmlReader) HealthVaultXmlReader.Create(reader))
+            using (var xmlReader = (CHBaseXmlReader) CHBaseXmlReader.Create(reader))
             {
                 xmlReader.Context = context;
                 try

@@ -456,7 +456,7 @@ namespace CHBase.Store
 
         public static ViewKeyCollection Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<ViewKeyCollection>(xml);
+            return CHBaseClient.Serializer.FromXml<ViewKeyCollection>(xml);
         }
 
         public void Validate()

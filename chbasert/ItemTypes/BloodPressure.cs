@@ -138,7 +138,7 @@ namespace CHBase.ItemTypes
 
         public static BloodPressure Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<BloodPressure>(xml);
+            return CHBaseClient.Serializer.FromXml<BloodPressure>(xml);
         }
 
         public static ItemQuery QueryFor()

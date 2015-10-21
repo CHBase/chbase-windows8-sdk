@@ -8,7 +8,7 @@ namespace CHBase.Foundation.Methods
 {
     public class GetPersonInfo : HealthVaultMethod
     {
-        public GetPersonInfo(HealthVaultClient client)
+        public GetPersonInfo(CHBaseClient client)
             : base(client)
         {
         }

@@ -34,7 +34,7 @@ namespace CHBase.Types
 
         public static Contact Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<Contact>(xml);
+            return CHBaseClient.Serializer.FromXml<Contact>(xml);
         }
     }
 }

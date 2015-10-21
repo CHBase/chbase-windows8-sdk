@@ -139,7 +139,7 @@ namespace CHBase.ItemTypes
         {
             XmlAttributeOverrides overrides = TypeMap.GetSerializerOverrides();
 
-            ISerializer serializer = HealthVaultClient.Serializer;
+            ISerializer serializer = CHBaseClient.Serializer;
 
             serializer.SetSerializerForType(typeof(RecordItem), new XmlSerializer(typeof(RecordItem), overrides));
             serializer.SetSerializerForType(typeof(ItemData), new XmlSerializer(typeof(ItemData), overrides));

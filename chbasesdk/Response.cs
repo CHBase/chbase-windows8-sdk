@@ -79,12 +79,12 @@ namespace CHBase.Foundation
 
         private void ReadStatus(XmlReader reader)
         {
-            Status = HealthVaultClient.Serializer.Deserialize<ResponseStatus>(reader);
+            Status = CHBaseClient.Serializer.Deserialize<ResponseStatus>(reader);
         }
 
         private void ReadBody(XmlReader reader)
         {
-            var hvReader = reader as HealthVaultXmlReader;
+            var hvReader = reader as CHBaseXmlReader;
             ResponseDeserializationContext context = null;
             if (hvReader != null)
             {
@@ -98,7 +98,7 @@ namespace CHBase.Foundation
             else
             {
                 hvReader.RootElementName = context.BodyType.Name;
-                Body = HealthVaultClient.Serializer.Deserialize(reader, context.BodyType);
+                Body = CHBaseClient.Serializer.Deserialize(reader, context.BodyType);
             }
         }
     }

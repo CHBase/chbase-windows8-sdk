@@ -16,12 +16,12 @@ namespace CHBase.Foundation.Methods
         RecordReference m_record;
         RequestBody m_body;
 
-        public RemoveThings(HealthVaultClient client, string personID, string recordID, RequestBody body)
+        public RemoveThings(CHBaseClient client, string personID, string recordID, RequestBody body)
             : this(client, new RecordReference(personID, recordID), body)
         {
         }
 
-        public RemoveThings(HealthVaultClient client, RecordReference record, RequestBody body)
+        public RemoveThings(CHBaseClient client, RecordReference record, RequestBody body)
             : base(client)
         {
             if (record == null)

@@ -68,7 +68,7 @@ namespace CHBase.Types
 
         public static ItemView Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<ItemView>(xml);
+            return CHBaseClient.Serializer.FromXml<ItemView>(xml);
         }
 
         private void UpdateSections(ItemSectionType section)

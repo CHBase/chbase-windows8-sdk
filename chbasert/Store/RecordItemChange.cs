@@ -156,7 +156,7 @@ namespace CHBase.Store
 
         public static RecordItemChange Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<RecordItemChange>(xml);
+            return CHBaseClient.Serializer.FromXml<RecordItemChange>(xml);
         }
 
         public void Validate()

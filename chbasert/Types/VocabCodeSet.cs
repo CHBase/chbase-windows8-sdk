@@ -45,7 +45,7 @@ namespace CHBase.Types
 
         public static VocabCodeSet Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<VocabCodeSet>(xml);
+            return CHBaseClient.Serializer.FromXml<VocabCodeSet>(xml);
         }
 
         public bool ShouldSerializeName()

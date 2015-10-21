@@ -30,7 +30,7 @@ namespace CHBase.Foundation
             m_recordRef = new RecordReference(personID, m_record.ID);
         }
 
-        internal HealthVaultClient Client { get; set; }
+        internal CHBaseClient Client { get; set; }
 
         #region IRecord Members
 

@@ -70,7 +70,7 @@
     <Compile Include="ServerStatusCode.cs" />
     <Compile Include="ServiceDefinition.cs" />
     <Compile Include="ServiceMethods.cs" />
-    <Compile Include="HealthVaultXmlReader.cs" />
+    <Compile Include="CHBaseXmlReader.cs" />
     <Compile Include="RecordReference.cs" />
     <Compile Include="ResponseDeserializationContext.cs" />
     <Compile Include="SerializationExtensions.cs" />
@@ -83,7 +83,7 @@
     <Compile Include="ServiceInfo.cs" />
     <Compile Include="RequestBody.cs" />
     <Compile Include="RequestHeader.cs" />
-    <Compile Include="HealthVaultClient.cs" />
+    <Compile Include="CHBaseClient.cs" />
     <Compile Include="ICryptographer.cs" />
     <Compile Include="Request.cs" />
     <Compile Include="RequestXsl.cs" />
@@ -135,7 +135,7 @@
     <Compile Include="Types\UpdatedRecord.cs" />
     <Compile Include="Types\UpdateRecordState.cs" />
     <Compile Include="ValidationExtensions.cs" />
-    <Compile Include="HealthVaultXmlWriter.cs" />
+    <Compile Include="CHBaseXmlWriter.cs" />
   </ItemGroup>
   <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

@@ -84,7 +84,7 @@ namespace CHBase.Foundation
 
         public static UserInfo Deserialize(string xml)
         {
-            var person = HealthVaultClient.Serializer.FromXml<PersonInfo>(xml);
+            var person = CHBaseClient.Serializer.FromXml<PersonInfo>(xml);
             if (person == null)
             {
                 throw new ArgumentException("xml");
@@ -93,7 +93,7 @@ namespace CHBase.Foundation
             return new UserInfo(person);
         }
 
-        internal void SetClient(HealthVaultClient client)
+        internal void SetClient(CHBaseClient client)
         {
             if (m_records == null)
             {

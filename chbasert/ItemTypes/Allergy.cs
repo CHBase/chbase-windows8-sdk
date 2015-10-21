@@ -107,7 +107,7 @@ namespace CHBase.ItemTypes
 
         public static Allergy Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<Allergy>(xml);
+            return CHBaseClient.Serializer.FromXml<Allergy>(xml);
         }
 
         public static ItemQuery QueryFor()

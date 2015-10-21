@@ -107,7 +107,7 @@ namespace CHBase.ItemTypes
 
         public static HealthGoal Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<HealthGoal>(xml);
+            return CHBaseClient.Serializer.FromXml<HealthGoal>(xml);
         }
 
         public static ItemQuery QueryFor()

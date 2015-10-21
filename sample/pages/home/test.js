@@ -223,9 +223,9 @@ function createHealthVaultAppSettings() {
     // http://go.microsoft.com/?linkid=9830913.
   
     return new CHBase.Foundation.HealthVaultAppSettings(
-       "e52995ca-d7dc-4cca-9c10-468d575932d3",
-       "http://platform.hvmdev502.grcdev.com/platform/wildcat.ashx",
-       "http://sweden-shell.hvmdev502.grcdev.com",
+       "705aba9b-0b9c-4f8a-8597-ff867ca350ed",
+       "https://chbaseplatform-ppev2.dev.grcdemo.com/platform/wildcat.ashx",
+       "https://chbase-ppev2.dev.grcdemo.com",
        true);
 }
 

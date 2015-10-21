@@ -100,7 +100,7 @@ namespace CHBase.ItemTypes
 
         public static Weight Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<Weight>(xml);
+            return CHBaseClient.Serializer.FromXml<Weight>(xml);
         }
 
         public static ItemQuery QueryFor()

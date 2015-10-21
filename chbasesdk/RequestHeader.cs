@@ -118,7 +118,7 @@ namespace CHBase.Foundation
         {
             var header = new RequestHeader();
             header.MethodVersion = 1;
-            header.Version = HealthVaultClient.Version;
+            header.Version = CHBaseClient.Version;
             header.Ttl = 1800;
             header.Timestamp = DateTime.UtcNow;
 

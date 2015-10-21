@@ -16,14 +16,14 @@ namespace CHBase.Sample
         public ServiceMethodProvider(HealthVaultAppSettings appSettings)
         {
             ServiceInfo serviceInfo = (ServiceInfo)ServiceFactory.CreateServiceInfo(
-                "http://platform.hvmdev502.grcdev.com/platform/wildcat.ashx",
-                "http://sweden-shell.hvmdev502.grcdev.com");
+                "https://chbaseplatform-ppev2.dev.grcdemo.com/platform/wildcat.ashx",
+                "https://chbase-ppev2.dev.grcdemo.com");
 
             AppInfo appInfo = new AppInfo();
             appInfo.MasterAppId = Guid.Parse(appSettings.MasterAppId);
             appInfo.IsMultiInstanceAware = true;
 
-            HealthVaultClient client = new HealthVaultClient(
+            CHBaseClient client = new CHBaseClient(
                 appInfo,
                 serviceInfo,
                 appSettings.IsFirstParty,

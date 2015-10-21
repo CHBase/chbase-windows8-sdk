@@ -11,7 +11,7 @@ namespace CHBase.Foundation.Methods
         private RequestBody m_requestBody;
         private Type m_responseType;
 
-        public SelectInstance(HealthVaultClient client, RequestBody requestBody, Type responseType) 
+        public SelectInstance(CHBaseClient client, RequestBody requestBody, Type responseType) 
             : base(client)
         {
             if (requestBody == null)

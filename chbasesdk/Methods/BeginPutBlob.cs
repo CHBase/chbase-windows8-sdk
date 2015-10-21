@@ -14,12 +14,12 @@ namespace CHBase.Foundation.Methods
     {
         RecordReference m_record;
 
-        public BeginPutBlob(HealthVaultClient client, string personID, string recordID)
+        public BeginPutBlob(CHBaseClient client, string personID, string recordID)
             : this(client, new RecordReference(personID, recordID))
         {
         }
 
-        public BeginPutBlob(HealthVaultClient client, RecordReference record)
+        public BeginPutBlob(CHBaseClient client, RecordReference record)
             : base(client)
         {
             if (record == null)

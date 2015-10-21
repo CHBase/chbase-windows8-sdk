@@ -124,7 +124,7 @@ namespace CHBase.ItemTypes
 
         public static Insurance Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<Insurance>(xml);
+            return CHBaseClient.Serializer.FromXml<Insurance>(xml);
         }
 
         public static ItemQuery QueryFor()

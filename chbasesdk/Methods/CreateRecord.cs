@@ -11,7 +11,7 @@ namespace CHBase.Foundation.Methods
         RequestBody m_requestBody;
         Type m_responseType;
 
-        public CreateRecord(HealthVaultClient client, RequestBody requestBody, Type responseType)
+        public CreateRecord(CHBaseClient client, RequestBody requestBody, Type responseType)
             : base(client)
         {
             if (requestBody == null)

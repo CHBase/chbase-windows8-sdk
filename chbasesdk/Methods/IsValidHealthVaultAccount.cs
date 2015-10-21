@@ -13,7 +13,7 @@ namespace CHBase.Foundation.Methods
         private Type m_responseType;
 
         public IsValidHealthVaultAccount(
-            HealthVaultClient client, 
+            CHBaseClient client, 
             string msaTicket,
             Type responseType)
             : this(client, new MSATicket(msaTicket), responseType)
@@ -21,7 +21,7 @@ namespace CHBase.Foundation.Methods
         }
 
         public IsValidHealthVaultAccount(
-            HealthVaultClient client,
+            CHBaseClient client,
             MSATicket msaTicket,
             Type responseType)
             : base(client)

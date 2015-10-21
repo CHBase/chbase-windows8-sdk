@@ -12,7 +12,7 @@ namespace CHBase.Foundation
     ///  - Serialization of XElements ("Any" element) fixed up
     ///  - Fragment conformance
     /// </summary>
-    public class HealthVaultXmlWriter : XmlWriter
+    public class CHBaseXmlWriter : XmlWriter
     {
         private const string XElementName = "XElement";
 
@@ -37,12 +37,12 @@ namespace CHBase.Foundation
         private XmlWriter m_inner;
         private int m_skipElementAtDepth;
 
-        public HealthVaultXmlWriter(XmlWriter inner)
+        public CHBaseXmlWriter(XmlWriter inner)
         {
             Inner = inner;
         }
 
-        internal HealthVaultXmlWriter()
+        internal CHBaseXmlWriter()
         {
         }
 
@@ -288,7 +288,7 @@ namespace CHBase.Foundation
         public new static XmlWriter Create(XmlWriter inner)
         {
             //inner.Settings.OmitXmlDeclaration = true;
-            return new HealthVaultXmlWriter(inner);
+            return new CHBaseXmlWriter(inner);
         }
 
         public new static XmlWriter Create(TextWriter textWriter)
@@ -299,7 +299,7 @@ namespace CHBase.Foundation
         public static XmlWriter Create(TextWriter textWriter, bool indent)
         {
             XmlWriter inner = Create(textWriter, indent ? WriterSettingsIndent : WriterSettings);
-            return new HealthVaultXmlWriter(inner);
+            return new CHBaseXmlWriter(inner);
         }
 
         public new static XmlWriter Create(StringBuilder builder)
@@ -309,13 +309,13 @@ namespace CHBase.Foundation
 
         public static XmlWriter Create(StringBuilder builder, bool indent)
         {
-            return new HealthVaultXmlWriter(Create(builder, indent ? WriterSettingsIndent : WriterSettings));
+            return new CHBaseXmlWriter(Create(builder, indent ? WriterSettingsIndent : WriterSettings));
         }
 
         public new static XmlWriter Create(Stream stream)
         {
             XmlWriter inner = Create(stream, WriterSettings);
-            return new HealthVaultXmlWriter(inner);
+            return new CHBaseXmlWriter(inner);
         }
     }
 }

@@ -119,7 +119,7 @@ namespace CHBase.ItemTypes
 
         public static Immunization Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<Immunization>(xml);
+            return CHBaseClient.Serializer.FromXml<Immunization>(xml);
         }
 
 

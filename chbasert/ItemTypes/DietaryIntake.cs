@@ -192,7 +192,7 @@ namespace CHBase.ItemTypes
 
         public static DietaryIntake Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<DietaryIntake>(xml);
+            return CHBaseClient.Serializer.FromXml<DietaryIntake>(xml);
         }
 
         public static ItemQuery QueryFor()

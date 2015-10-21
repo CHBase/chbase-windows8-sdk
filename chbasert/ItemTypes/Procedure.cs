@@ -95,7 +95,7 @@ namespace CHBase.ItemTypes
 
         public static Procedure Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<Procedure>(xml);
+            return CHBaseClient.Serializer.FromXml<Procedure>(xml);
         }
 
         public static ItemQuery QueryFor()

@@ -10,11 +10,11 @@ namespace CHBase.Foundation
     {
         private const string InstanceQueryParamKey = "instanceid=";
 
-        private readonly HealthVaultClient m_client;
+        private readonly CHBaseClient m_client;
         private string m_authCompletePage;
         private string m_targetPage;
 
-        public Shell(HealthVaultClient client)
+        public Shell(CHBaseClient client)
         {
             if (client == null)
             {

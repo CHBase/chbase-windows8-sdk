@@ -102,7 +102,7 @@ namespace CHBase.ItemTypes
 
         public static BloodGlucose Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<BloodGlucose>(xml);
+            return CHBaseClient.Serializer.FromXml<BloodGlucose>(xml);
         }
 
         public static ItemQuery QueryFor()

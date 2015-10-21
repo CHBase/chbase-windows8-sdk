@@ -150,7 +150,7 @@ namespace CHBase.Foundation
                 return new ClientState();
             }
 
-            return HealthVaultClient.Serializer.FromXml<ClientState>(xml);
+            return CHBaseClient.Serializer.FromXml<ClientState>(xml);
         }
 
         public void Reset(ISecretStore store)

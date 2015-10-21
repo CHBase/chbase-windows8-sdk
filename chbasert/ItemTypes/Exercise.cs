@@ -128,7 +128,7 @@ namespace CHBase.ItemTypes
 
         public static Exercise Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<Exercise>(xml);
+            return CHBaseClient.Serializer.FromXml<Exercise>(xml);
         }
 
         public static ItemQuery QueryFor()

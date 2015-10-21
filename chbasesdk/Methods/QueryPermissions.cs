@@ -13,7 +13,7 @@ namespace CHBase.Foundation.Methods
         private Type m_responseType;
 
         public QueryPermissions(
-            HealthVaultClient client,
+            CHBaseClient client,
             string personID, 
             string recordID,
             RequestBody body,
@@ -23,7 +23,7 @@ namespace CHBase.Foundation.Methods
         }
 
         public QueryPermissions(
-            HealthVaultClient client,
+            CHBaseClient client,
             RecordReference record,
             RequestBody body,
             Type responseType)

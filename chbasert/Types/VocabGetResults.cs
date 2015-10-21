@@ -32,7 +32,7 @@ namespace CHBase.Types
 
         public static VocabGetResults Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<VocabGetResults>(xml);
+            return CHBaseClient.Serializer.FromXml<VocabGetResults>(xml);
         }
     }
 }

@@ -14,12 +14,12 @@ namespace CHBase.Foundation.Methods
         RequestBody m_body;
         Type m_responseType;
 
-        public PutThings(HealthVaultClient client, string personID, string recordID, RequestBody body, Type responseType)
+        public PutThings(CHBaseClient client, string personID, string recordID, RequestBody body, Type responseType)
             : this(client, new RecordReference(personID, recordID), body, responseType)
         {
         }
 
-        public PutThings(HealthVaultClient client, RecordReference record, RequestBody body, Type responseType)
+        public PutThings(CHBaseClient client, RecordReference record, RequestBody body, Type responseType)
             : base(client)
         {
             if (record == null)

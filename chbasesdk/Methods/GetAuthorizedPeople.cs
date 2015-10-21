@@ -11,7 +11,7 @@ namespace CHBase.Foundation.Methods
 {
     public class GetAuthorizedPeople : HealthVaultMethod
     {
-        public GetAuthorizedPeople(HealthVaultClient client)
+        public GetAuthorizedPeople(CHBaseClient client)
             : base(client)
         {
         }

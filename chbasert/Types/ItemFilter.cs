@@ -94,7 +94,7 @@ namespace CHBase.Types
 
         public static ItemFilter Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<ItemFilter>(xml);
+            return CHBaseClient.Serializer.FromXml<ItemFilter>(xml);
         }
 
         //

@@ -89,7 +89,7 @@ namespace CHBase.Types
 
         public static ItemDataBlob Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<ItemDataBlob>(xml);
+            return CHBaseClient.Serializer.FromXml<ItemDataBlob>(xml);
         }
 
         public static IAsyncOperation<ItemDataBlob> GetBlobDataAsync(IRecord record, ItemKey key)

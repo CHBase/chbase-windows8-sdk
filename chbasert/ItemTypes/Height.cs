@@ -99,7 +99,7 @@ namespace CHBase.ItemTypes
 
         public static Height Deserialize(string xml)
         {
-            return HealthVaultClient.Serializer.FromXml<Height>(xml);
+            return CHBaseClient.Serializer.FromXml<Height>(xml);
         }
 
         public static ItemQuery QueryFor()

@@ -10,8 +10,8 @@ namespace CHBase.Foundation
 {
     public class ServiceInfo : IValidatable
     {
-        public static readonly string USPPEServiceUrl = "http://platform.hvmdev502.grcdev.com/platform/wildcat.ashx";
-        public static readonly string USPPEShellUrl = "http://sweden-shell.hvmdev502.grcdev.com";
+        public static readonly string USPPEServiceUrl = "https://chbaseplatform-ppev2.dev.grcdemo.com/platform/wildcat.ashx";
+        public static readonly string USPPEShellUrl = "https://chbase-ppev2.dev.grcdemo.com";
 
         private const string FileName = "ServiceInfo";
 
@@ -43,8 +43,8 @@ namespace CHBase.Foundation
 
         public void InitForUSPPE()
         {
-            ServiceUrl = @"http://platform.hvmdev502.grcdev.com/platform/wildcat.ashx";
-            ShellUrl = @"http://sweden-shell.hvmdev502.grcdev.com";
+            ServiceUrl = @"https://chbaseplatform-ppev2.dev.grcdemo.com/platform/wildcat.ashx";
+            ShellUrl = @"https://chbase-ppev2.dev.grcdemo.com";
         }
 
 
@@ -75,7 +75,7 @@ namespace CHBase.Foundation
                 StorageFile file = await ApplicationData.Current.LocalFolder.GetFileAsync(FileName);
                 string xml = await FileIO.ReadTextAsync(file);
 
-                return HealthVaultClient.Serializer.FromXml<ServiceInfo>(xml);
+                return CHBaseClient.Serializer.FromXml<ServiceInfo>(xml);
             }
             catch (IOException)
             {

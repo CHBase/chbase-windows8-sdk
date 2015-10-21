@@ -12,13 +12,13 @@ namespace CHBase.Foundation.Methods
     {
         private object[] m_data;
 
-        public GetServiceDefinition(HealthVaultClient client)
+        public GetServiceDefinition(CHBaseClient client)
             : base(client)
         {
             m_data = null;
         }
 
-        public GetServiceDefinition(HealthVaultClient client, ServiceDefinitionResponseSections[] responseSections)
+        public GetServiceDefinition(CHBaseClient client, ServiceDefinitionResponseSections[] responseSections)
             : base(client)
         {
             if (responseSections == null)
@@ -29,13 +29,13 @@ namespace CHBase.Foundation.Methods
             m_data = new object[] { new ResponseConfig(responseSections) };
         }
 
-        public GetServiceDefinition(HealthVaultClient client, DateTime lastUpdated)
+        public GetServiceDefinition(CHBaseClient client, DateTime lastUpdated)
             : base(client)
         {
             m_data = new object[] { new LastUpdatedDate(lastUpdated) };
         }
 
-        public GetServiceDefinition(HealthVaultClient client, DateTime lastUpdated, ServiceDefinitionResponseSections[] responseSections)
+        public GetServiceDefinition(CHBaseClient client, DateTime lastUpdated, ServiceDefinitionResponseSections[] responseSections)
             : base(client)
         {
             if (responseSections == null)

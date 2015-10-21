@@ -11,7 +11,7 @@ namespace CHBase.Foundation.Methods
 {
     public class NewApplicationProvisioningInfo : HealthVaultMethod
     {
-        public NewApplicationProvisioningInfo(HealthVaultClient client)
+        public NewApplicationProvisioningInfo(CHBaseClient client)
             : base(client)
         {
         }

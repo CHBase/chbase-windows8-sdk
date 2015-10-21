@@ -9,7 +9,7 @@ namespace CHBase.Foundation.Methods
         private readonly RequestBody m_body;
         private readonly Type m_responseType;
 
-        public GetThingType(HealthVaultClient client, RequestBody body, Type responseType)
+        public GetThingType(CHBaseClient client, RequestBody body, Type responseType)
             : base(client)
         {
             if (body == null)
