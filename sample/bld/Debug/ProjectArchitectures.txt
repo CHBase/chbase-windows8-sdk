@@ -1,0 +1,5 @@
+Z:\HealthVaultLib-Windows8-0.3\chbasert\CHBase.Runtime.csproj;neutral
+Z:\HealthVaultLib-Windows8-0.3\chbasesdk\CHBase.Foundation.csproj;neutral
+Z:\HealthVaultLib-Windows8-0.3\chbasesdk\CHBase.Foundation.csproj;neutral
+Z:\HealthVaultLib-Windows8-0.3\sample\CHBaseJS.jsproj;neutral
+Z:\HealthVaultLib-Windows8-0.3\sample\Library\CHBase.Sample.csproj;neutral
