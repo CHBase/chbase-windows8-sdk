@@ -77,8 +77,7 @@ namespace CHBase.Foundation
             AppInfo appInfo = m_client.AppInfo;
 
             string qs = string.Format(
-                "appid={0}&appCreationToken={1}&instanceName={2}&ismra=true",
-                appInfo.MasterAppId,
+                "appCreationToken={1}&instanceName={2}&ismra=true",
                 Uri.EscapeDataString(provInfo.AppCreationToken),
                 Uri.EscapeDataString(appInfo.InstanceName));
 
